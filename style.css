@@ -115,6 +115,7 @@ nav {
 }
 .hero-introduction p {
   padding: 5rem 10rem;
+  color: var(--gray-text);
 }
 .hero-introduction a {
   padding: 2rem 8rem;
@@ -180,14 +181,55 @@ nav {
   display: none;
 }
 
+/* ABOUT SECTION */
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-image {
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about-image h5 {
+  position: absolute;
+  letter-spacing: 2rem;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-text {
+  color: white;
+  background: var(--background-color);
+  flex: 2 1 40rem;
+  justify-content: space-around;
+}
+.about-text div {
+  padding: 3rem 8rem;
+}
+.about-text h2 {
+  font-family: "Vibes", sans-serif;
+  padding: 4rem;
+}
+.about-text h3 {
+  font-family: "Ruhl Medium", sans-serif;
+  padding: 2rem 0rem;
+}
+
 /* RESPONSIVENESS */
 
 @media screen and (max-width: 842px) {
   .hero {
     width: 100%;
   }
-  .hero-introduction p{
-      padding: 5rem 3rem;
+  .hero-introduction p {
+    padding: 5rem 3rem;
   }
   /* BURGER THING */
   .burger {
@@ -243,5 +285,10 @@ nav {
   }
   .menu-check:checked ~ .burger span:nth-child(3) {
     transform: rotateZ(-45deg) translateY(-300%);
+  }
+
+  /* ABOUT SECTION */
+  .about-text div {
+    padding: 3rem;
   }
 }
